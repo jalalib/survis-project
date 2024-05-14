@@ -1,6 +1,8 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>SurVis Literature Browser</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
     <script type="text/javascript" src="js/lib/bibtex_js.js"></script>
@@ -33,9 +35,21 @@
     <script type="text/javascript" src="js/page.js"></script>
     <script type="text/javascript" src="js/entry_layout.js"></script>
     <script type="text/javascript" src="js/timeline.js"></script>
+
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
-
 <body>
+    <div id="survis"></div>
+    <script>
+        // SurVis configuration
+        var config = {
+            bibFiles: ['bib/references.bib'],
+            // Other configuration options...
+        };
+        // Initialize SurVis with the configuration
+        $(document).ready(function() {
+            SurVis(config);
+        });
+    </script>
 </body>
-
 </html>
